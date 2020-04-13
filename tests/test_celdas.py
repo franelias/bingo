@@ -8,3 +8,12 @@ def test_contar_celdas_ocupadas():
             contador = contador + celda
 
     assert contador == 15
+
+def test_revisar_columnas_ocupadas():
+    mi_carton = carton()
+    ban = 0
+    for x in range(0, 7):
+        if mi_carton[0][x] == 0 and mi_carton[1][x] == 0 and mi_carton[2][x] == 0:
+            ban = 1
+
+    assert ban == 0
