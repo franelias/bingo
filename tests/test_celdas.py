@@ -42,7 +42,7 @@ def contar_celdas_por_fila(carton, fila):
         contador = contador + carton[fila][x]
 
     return contador
-
+#Test que valida que hay por lo menos una celda ocupada por fila
 def test_revisar_filas_ocupadas():
     mi_carton = carton()
     for x in range(3):
