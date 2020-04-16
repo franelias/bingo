@@ -9,6 +9,24 @@ def test_contar_celdas_ocupadas():
 
     assert contador == 15
 
+def test_menos_de_15_celdas_ocupadas():
+    mi_carton = carton();
+    contador = 0
+    for fila in mi_carton:
+        for celda in fila:
+            contador = contador + celda
+
+    assert contador <= 15
+
+def test_mas_de_15_celdas_ocupadas():
+    mi_carton = carton();
+    contador = 0
+    for fila in mi_carton:
+        for celda in fila:
+            contador = contador + celda
+
+    assert contador >= 15
+
 def test_revisar_columnas_ocupadas():
     mi_carton = carton()
     ban = 0
