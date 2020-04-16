@@ -1,4 +1,5 @@
 from src.bingo import carton
+
 #Test que revisa si la cantidad de celda ocupadas es 15
 def test_contar_celdas_ocupadas():
     mi_carton = carton()
@@ -8,6 +9,7 @@ def test_contar_celdas_ocupadas():
             contador = contador + celda
 
     assert contador == 15
+
 #Test que revisa si la cantidad de celdas ocupadas no es mayor a 15
 def test_menos_de_15_celdas_ocupadas():
     mi_carton = carton();
@@ -17,6 +19,7 @@ def test_menos_de_15_celdas_ocupadas():
             contador = contador + celda
 
     assert contador <= 15
+
 #Test que revisa si la cantidad de celdas ocupadas no es menor a 15
 def test_mas_de_15_celdas_ocupadas():
     mi_carton = carton();
@@ -26,6 +29,7 @@ def test_mas_de_15_celdas_ocupadas():
             contador = contador + celda
 
     assert contador >= 15
+
 #Test que revisa si hay al menos una celda ocupada en cada columna del carton
 def test_revisar_columnas_ocupadas():
     mi_carton = carton()
@@ -36,12 +40,14 @@ def test_revisar_columnas_ocupadas():
 
     assert ban == 0
 
+#Funcion que cuenta las celdas ocupadas por fila
 def contar_celdas_por_fila(carton, fila):
     contador = 0
     for x in range(9):
         contador = contador + carton[fila][x]
 
     return contador
+
 #Test que valida que hay por lo menos una celda ocupada por fila
 def test_revisar_filas_ocupadas():
     mi_carton = carton()
