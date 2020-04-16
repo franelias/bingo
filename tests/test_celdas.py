@@ -35,3 +35,18 @@ def test_revisar_columnas_ocupadas():
             ban = 1
 
     assert ban == 0
+
+def contar_celdas_por_fila(carton, fila):
+    contador = 0
+    for x in range(9):
+        contador = contador + carton[fila][x]
+
+    return contador
+#Test que valida que hay por lo menos una celda ocupada por fila
+def test_revisar_filas_ocupadas():
+    mi_carton = carton()
+    for x in range(3):
+        if contar_celdas_por_fila(mi_carton,x) == 0:
+            assert False
+
+    assert True
