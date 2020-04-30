@@ -33,3 +33,11 @@ def validar_mas_quince_numeros(carton):
                 celdas_vacias = celdas_vacias + 1
 
     return celdas_vacias >= 12
+
+#Funcion que cuenta las celdas ocupadas por fila
+def contar_celdas_por_fila(carton, fila):
+    contador = 0
+    for x in range(9):
+        contador = contador + carton[fila][x]
+
+    return contador

@@ -27,14 +27,6 @@ def test_revisar_columnas_ocupadas():
 
     assert True
 
-#Funcion que cuenta las celdas ocupadas por fila
-def contar_celdas_por_fila(carton, fila):
-    contador = 0
-    for x in range(9):
-        contador = contador + carton[fila][x]
-
-    return contador
-
 #Test que valida que hay por lo menos una celda ocupada por fila
 def test_revisar_filas_ocupadas():
     mi_carton = carton()
