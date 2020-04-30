@@ -2,6 +2,7 @@ from src.bingo import carton
 from src.bingo import validar_quince_numeros
 from src.bingo import validar_menos_quince_numeros
 from src.bingo import validar_mas_quince_numeros
+from src.bingo import contar_celdas_por_fila
 
 #Test que revisa si la cantidad de celda ocupadas es 15
 def test_contar_celdas_ocupadas():
