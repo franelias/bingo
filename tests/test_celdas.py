@@ -4,6 +4,7 @@ from src.bingo import validar_menos_quince_numeros
 from src.bingo import validar_mas_quince_numeros
 from src.bingo import contar_celdas_por_fila
 from src.bingo import revisar_columnas_ocupadas
+from src.bingo import revisar_filas_ocupadas
 
 #Test que revisa si la cantidad de celda ocupadas es 15
 def test_contar_celdas_ocupadas():
@@ -28,8 +29,4 @@ def test_revisar_columnas_ocupadas():
 #Test que valida que hay por lo menos una celda ocupada por fila
 def test_revisar_filas_ocupadas():
     mi_carton = carton()
-    for x in range(3):
-        if contar_celdas_por_fila(mi_carton,x) == 0:
-            assert False
-
-    assert True
+    assert revisar_filas_ocupadas(mi_carton)

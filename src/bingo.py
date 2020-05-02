@@ -50,6 +50,13 @@ def revisar_columnas_ocupadas(carton):
 
     return True
 
+def revisar_filas_ocupadas(carton):
+    for x in range(3):
+        if contar_celdas_por_fila(carton,x) == 0:
+            return False
+
+    return True
+
 def validar_numeros_carton(carton):
     for fila in carton:
         for celda in fila:
