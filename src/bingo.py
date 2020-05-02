@@ -1,4 +1,3 @@
-
 def carton():
     carton = (
         (5,10,0,0,44,0,62,70,0),
@@ -76,5 +75,12 @@ def posicion_numeros_izquierda_a_derecha(carton):
             posicion2 += 10
             if posicion2 == 89:
                 posicion2 += 1
+
+    return True
+
+def posicion_numeros_en_columna(carton):
+    for x in range(9):
+        if ((carton[0][x] <> 0 and carton[1][x] <> 0) and (carton[0][x] > carton[1][x])) or ((carton[1][x] <> 0 and carton[2][x] <> 0) and (carton[1][x] > carton[2][x])) or ((carton[0][x] <> 0 and carton[2][x] <> 0) and (carton[0][x] > carton[2][x])):
+            return False
 
     return True
