@@ -84,3 +84,15 @@ def posicion_numeros_en_columna(carton):
             return False
 
     return True
+
+def numeros_sin_repetir(carton):
+    repe = [0] * 91
+    for fila in carton:
+        for celda in fila:
+            if celda <> 0:
+                if repe[celda] == 0:
+                    repe[celda] += 1
+                else:
+                    return False
+
+    return True
