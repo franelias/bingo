@@ -58,7 +58,7 @@ def revisar_filas_ocupadas(carton):
 def validar_numeros_carton(carton):
     for fila in carton:
         for celda in fila:
-            if celda <> 0 and (celda > 90 or celda < 0):
+            if celda != 0 and (celda > 90 or celda < 0):
                 return False
 
     return True
@@ -68,7 +68,7 @@ def posicion_numeros_izquierda_a_derecha(carton):
         posicion1 = 0
         posicion2 = 9
         for y in range(9):
-            if carton [x][y] <> 0:
+            if carton [x][y] != 0:
                 if not(carton[x][y] >= posicion1 and carton[x][y] <= posicion2):
                     return False
             posicion1 += 10
@@ -80,7 +80,7 @@ def posicion_numeros_izquierda_a_derecha(carton):
 
 def posicion_numeros_en_columna(carton):
     for x in range(9):
-        if ((carton[0][x] <> 0 and carton[1][x] <> 0) and (carton[0][x] > carton[1][x])) or ((carton[1][x] <> 0 and carton[2][x] <> 0) and (carton[1][x] > carton[2][x])) or ((carton[0][x] <> 0 and carton[2][x] <> 0) and (carton[0][x] > carton[2][x])):
+        if ((carton[0][x] != 0 and carton[1][x] != 0) and (carton[0][x] > carton[1][x])) or ((carton[1][x] != 0 and carton[2][x] != 0) and (carton[1][x] > carton[2][x])) or ((carton[0][x] != 0 and carton[2][x] != 0) and (carton[0][x] > carton[2][x])):
             return False
 
     return True
@@ -89,7 +89,7 @@ def numeros_sin_repetir(carton):
     repe = [0] * 91
     for fila in carton:
         for celda in fila:
-            if celda <> 0:
+            if celda != 0:
                 if repe[celda] == 0:
                     repe[celda] += 1
                 else:
