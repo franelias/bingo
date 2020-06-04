@@ -172,3 +172,11 @@ def filas_2_celdas_consecutivas_vacias(carton):
                 return False
 
     return True
+
+def filas_2_celdas_consecutivas_ocupadas(carton):
+    for x in range(3):
+        for y in range(7):
+            if carton[x][y] != 0 and carton[x][y+1] != 0 and carton[x][y+2] != 0:
+                return False
+
+    return True
