@@ -118,3 +118,10 @@ def fila_5_celdas_ocupadas(carton):
             return False
 
     return True
+
+def columnas_vacias(carton):
+    for x in range(9):
+        if carton[0][x] == 0 and carton[1][x] == 0 and carton[2][x] == 0:
+            return False
+
+    return True
