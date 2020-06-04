@@ -151,3 +151,16 @@ def columnas_llenas(carton):
             return False
 
     return True
+
+def columnas_con_una_celda_ocupada(carton):
+    uno = 0
+
+    for x in range(9):
+        con = 0
+        for y in range(3):
+            if carton[y][x] != 0:
+                con += 1
+        if con == 1:
+            uno += 1
+
+    return uno == 3
