@@ -99,9 +99,11 @@ def numeros_sin_repetir(carton):
 
 def matriz_3x9(carton):
     filas = len(carton)
-    columnas = 0
 
     for fila in range(3):
+        columnas = 0
         columnas += len(carton[fila])
+        if columnas != 9:
+            return False
 
-    return filas == 3 and columnas == 27
+    return filas == 3 and columnas == 9
