@@ -1,5 +1,6 @@
 # Bingo
 [![Build Status](https://travis-ci.com/franelias/bingo.svg?branch=master)](https://travis-ci.com/franelias/bingo)
+[![Coverage Status](https://coveralls.io/repos/github/franelias/bingo/badge.svg?branch=master)](https://coveralls.io/github/franelias/bingo?branch=master)
 
 Proyecto realizado para la materia Adaptación del ambiente de trabajo, de la tecnicatura en informatica profesional y personal, del 6to año del Instituto Politecnico Superior.
 
