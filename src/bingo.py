@@ -182,3 +182,11 @@ def filas_2_celdas_consecutivas_ocupadas(carton):
                 return False
 
     return True
+
+
+def imprimirCarton(carton):
+    print('\n')
+    for fila in range(3):
+        for columna in range(9):
+            print(carton[fila][columna],end=' ')
+        print('\n')

@@ -64,10 +64,3 @@ def intentoCarton():
             return intentoCarton()
 
     return carton
-
-def imprimirCarton(carton):
-    print('\n')
-    for fila in range(3):
-        for columna in range(9):
-            print(carton[fila][columna],end=' ')
-        print('\n')
