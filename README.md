@@ -2,11 +2,11 @@
 [![Build Status](https://travis-ci.com/franelias/bingo.svg?branch=master)](https://travis-ci.com/franelias/bingo)
 [![Coverage Status](https://coveralls.io/repos/github/franelias/bingo/badge.svg?branch=master)](https://coveralls.io/github/franelias/bingo?branch=master)
 
-Proyecto realizado para la materia Adaptación del ambiente de trabajo, de la tecnicatura en informatica profesional y personal, del 6to año del Instituto Politecnico Superior.
+Proyecto realizado para la materia Adaptación del ambiente de trabajo, de la Tecnicatura en Informatica Profesional y Personal, del 6to año del Instituto Politecnico Superior de Rosario.
 
 ## Descripción general
 
-El mismo se basa en el juego de bingo tradicional de 90 bolas. A través del uso de Python, se genera un cartón válido para el juego, según las siguientes condiciones:
+El mismo se basa en el juego de bingo tradicional de 90 bolas. A través del uso de Python, se genera un cartón válido para su uso, según las siguientes condiciones:
 - Los números del carton se encuentran en el rango 1 a 90.
 - No hay números repetidos en el carton.
 - Cada fila de un carton tiene exactamente 5 celdas ocupadas.
