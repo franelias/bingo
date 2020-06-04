@@ -28,10 +28,10 @@ git clone https://github.com/franelias/bingo.git
 ```
 - Ejecutar el programa
 ```
-python3 src/bingo.py
+python src/bingo.py
 ```
 
-##Testeo
+## Testeo
 El proyecto cuenta con una serie de tests que validan cada una de las condiciones antes mencionadas que debe cumplir un cartón. os mismos se encuentran en la carpeta `tests` del repositorio.
 
 Para ejecutarlos, se requiere la herramienta `pytest`. La instalación del mismo se hace a través de la herramienta `pip`
