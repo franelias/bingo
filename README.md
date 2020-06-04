@@ -4,7 +4,9 @@
 
 Proyecto realizado para la materia Adaptación del ambiente de trabajo, de la tecnicatura en informatica profesional y personal, del 6to año del Instituto Politecnico Superior.
 
-El programa genera un cartón de bingo válido, según estas condiciones:
+##Descripción general
+
+El mismo se basa en el juego de bingo tradicional de 90 bolas. A través del uso de Python, se genera un cartón válido para el juego, según las siguientes condiciones:
 - Los números del carton se encuentran en el rango 1 a 90.
 - No hay números repetidos en el carton.
 - Cada fila de un carton tiene exactamente 5 celdas ocupadas.
@@ -18,3 +20,25 @@ El programa genera un cartón de bingo válido, según estas condiciones:
 - En una fila no existen más de dos celdas vacías consecutivas.
 - En una fila no existen más de dos celdas ocupadas consecutivas.
 
+##Uso
+El programa utiliza para su ejecución `Python 3`, y para su ejecución, se requieren los siguientes pasos:
+- Clonar el repositorio
+```
+git clone https://github.com/franelias/bingo.git
+```
+- Ejecutar el programa
+```
+python3 src/bingo.py
+```
+
+##Testeo
+El proyecto cuenta con una serie de tests que validan cada una de las condiciones antes mencionadas que debe cumplir un cartón. os mismos se encuentran en la carpeta `tests` del repositorio.
+
+Para ejecutarlos, se requiere la herramienta `pytest`. La instalación del mismo se hace a través de la herramienta `pip`
+```
+pip install -U pytest
+```
+Ya instalado, basta con correrlo para ver la ejecución de los tests con el comando
+```
+pytest
+```
