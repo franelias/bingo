@@ -4,7 +4,7 @@
 
 Proyecto realizado para la materia Adaptación del ambiente de trabajo, de la tecnicatura en informatica profesional y personal, del 6to año del Instituto Politecnico Superior.
 
-##Descripción general
+## Descripción general
 
 El mismo se basa en el juego de bingo tradicional de 90 bolas. A través del uso de Python, se genera un cartón válido para el juego, según las siguientes condiciones:
 - Los números del carton se encuentran en el rango 1 a 90.
@@ -20,7 +20,7 @@ El mismo se basa en el juego de bingo tradicional de 90 bolas. A través del uso
 - En una fila no existen más de dos celdas vacías consecutivas.
 - En una fila no existen más de dos celdas ocupadas consecutivas.
 
-##Uso
+## Uso
 El programa utiliza para su ejecución `Python 3`, y para su ejecución, se requieren los siguientes pasos:
 - Clonar el repositorio
 ```
