@@ -107,3 +107,14 @@ def matriz_3x9(carton):
             return False
 
     return filas == 3 and columnas == 9
+
+def fila_5_celdas_ocupadas(carton):
+    for fila in carton:
+        con = 0
+        for celda in fila:
+            if celda != 0:
+                con += 1
+        if con != 5:
+            return False
+
+    return True
