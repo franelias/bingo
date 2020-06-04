@@ -4,7 +4,7 @@ install:
     pip install coveralls
 
 script:
-    coverage run -m pytest
+    coverage run -m --source=/home/travis/build/franelias/bingo pytest
     
 after_success:
     coveralls
