@@ -51,26 +51,21 @@ def revisar_columnas_ocupadas(carton):
     return True
 
 def revisar_filas_ocupadas(carton):
-    ban = 0
     for x in range(3):
         if contar_celdas_por_fila(carton,x) == 0:
-            ban = 1
-            break
+            return False
 
-    return ban == 0
+    return True
 
 def validar_numeros_carton(carton):
-    ban = 0
     for fila in carton:
         for celda in fila:
             if celda != 0 and (celda > 90 or celda < 0):
-                ban = 1
-                break
+                return False
 
-    return ban == 0
+    return True
 
 def posicion_numeros_izquierda_a_derecha(carton):
-    ban = 0
     numeros =  [
       [0,0,0],
       [0,0,0],
@@ -100,22 +95,18 @@ def posicion_numeros_izquierda_a_derecha(carton):
 
     for x in range(14):
         if pos[x] > pos[x+1]:
-            ban = 1
-            break
+            return False
 
-    return ban == 0
+    return True
 
 def posicion_numeros_en_columna(carton):
-    ban = 0
     for x in range(9):
         if ((carton[0][x] != 0 and carton[1][x] != 0) and (carton[0][x] > carton[1][x])) or ((carton[1][x] != 0 and carton[2][x] != 0) and (carton[1][x] > carton[2][x])) or ((carton[0][x] != 0 and carton[2][x] != 0) and (carton[0][x] > carton[2][x])):
-            ban = 1
-            break
+            return False
 
-    return ban == 0
+    return True
 
 def numeros_sin_repetir(carton):
-    ban = 0
     repe = [0] * 91
     for fila in carton:
         for celda in fila:
@@ -123,54 +114,45 @@ def numeros_sin_repetir(carton):
                 if repe[celda] == 0:
                     repe[celda] += 1
                 else:
-                    ban = 1
-                    break
+                    return False
 
-    return ban == 0
+    return True
 
 def matriz_3x9(carton):
-    ban = 0
     filas = len(carton)
 
     for fila in range(3):
         columnas = 0
         columnas += len(carton[fila])
         if columnas != 9:
-            ban = 1
-            break
+            return False
 
-    return filas == 3 and columnas == 9 and ban == 0
+    return filas == 3 and columnas == 9
 
 def fila_5_celdas_ocupadas(carton):
-    ban = 0
     for fila in carton:
         con = 0
         for celda in fila:
             if celda != 0:
                 con += 1
         if con != 5:
-            ban = 1
-            break
+            return False
 
-    return ban == 0
+    return True
 
 def columnas_vacias(carton):
-    ban = 0
     for x in range(9):
         if carton[0][x] == 0 and carton[1][x] == 0 and carton[2][x] == 0:
-            ban = 1
-            break
+            return False
 
-    return ban == 0
+    return True
 
 def columnas_llenas(carton):
-    ban = 0
     for x in range(9):
         if carton[0][x] != 0 and carton[1][x] != 0 and carton[2][x] != 0:
-            ban = 1
-            break
+            return False
 
-    return ban == 0
+    return True
 
 def columnas_con_una_celda_ocupada(carton):
     uno = 0
@@ -186,21 +168,17 @@ def columnas_con_una_celda_ocupada(carton):
     return uno == 3
 
 def filas_2_celdas_consecutivas_vacias(carton):
-    ban = 0
     for x in range(3):
         for y in range(7):
             if carton[x][y] == 0 and carton[x][y+1] == 0 and carton[x][y+2] == 0:
-                ban = 1
-                break
+                return False
 
-    return ban == 0
+    return True
 
 def filas_2_celdas_consecutivas_ocupadas(carton):
-    ban = 0
     for x in range(3):
         for y in range(7):
             if carton[x][y] != 0 and carton[x][y+1] != 0 and carton[x][y+2] != 0:
-                ban = 1
-                break
+                return False
 
-    return ban == 0
+    return True
