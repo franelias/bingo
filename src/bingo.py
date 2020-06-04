@@ -1,9 +1,11 @@
+from src.cartones import intentoCarton
+
 def carton():
-    carton = (
-        (5,10,0,0,44,0,62,70,0),
-        (0,16,0,37,47,0,0,76,81),
-        (7,0,21,39,0,58,0,0,90)
-    )
+    while True:
+        carton = intentoCarton()
+        if validar_quince_numeros(carton) and validar_menos_quince_numeros(carton) and validar_mas_quince_numeros(carton) and revisar_columnas_ocupadas(carton) and revisar_filas_ocupadas(carton) and validar_numeros_carton(carton) and posicion_numeros_izquierda_a_derecha(carton) and posicion_numeros_en_columna(carton) and numeros_sin_repetir(carton) and matriz_3x9(carton) and fila_5_celdas_ocupadas(carton) and columnas_vacias(carton) and columnas_llenas(carton) and columnas_con_una_celda_ocupada(carton) and filas_2_celdas_consecutivas_vacias(carton) and filas_2_celdas_consecutivas_ocupadas(carton):
+            break
+
     return carton
 
 def validar_quince_numeros(carton):
