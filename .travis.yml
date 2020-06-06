@@ -2,9 +2,10 @@ language: python
 
 install:
     pip install coveralls
+    pip install pytest-repeat
 
 script:
-    coverage run -m --source=/home/travis/build/franelias/bingo/tests pytest
+    coverage run -m --source=/home/travis/build/franelias/bingo/tests pytest --count=5
     
 after_success:
     coveralls
