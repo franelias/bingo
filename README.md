@@ -30,8 +30,17 @@ git clone https://github.com/franelias/bingo.git
 ```
 python src/bingo.py
 ```
+
 ## Resultado
-El resultado de ejecutar el programa es una lista bidimensional, de 3 filas y 9 columnas, que poseen números que van del 0 al 90. Cada casilla con un 0 hace referencia a que esta vacia, y por ende, no posee ningún valor numérico. El resto, son los valores que posee cada casilla.
+El resultado de ejecutar el programa es un cartón valido como el siguiente:
+```
+5 10 0 30 0 51 61 0 0
+
+8 14 0 32 0 0 67 0 84
+
+0 0 21 0 48 55 0 71 85
+```
+En el, cada celda puede tener dos formas, una representada con un 0, celda vacía, o con un número mayor a este, que indica que no esta vacía y posee el valor que le corresponde.
 
 ## Testeo
 El proyecto cuenta con una serie de tests que validan cada una de las condiciones antes mencionadas que debe cumplir un cartón. os mismos se encuentran en la carpeta `tests` del repositorio.
