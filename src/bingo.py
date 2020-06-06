@@ -1,6 +1,7 @@
 import random
 import math
 
+#Función que genera un cartón, que puede ser valido o no
 def intentoCarton():
     con = 0
     carton = [
@@ -55,16 +56,9 @@ def intentoCarton():
         numerosCarton += 1
         con = 0
 
-    for x in range(3):
-        huecos = 0
-        for y in range(9):
-            if carton[x][y] == 0:
-                huecos += 1
-        if huecos == 3:
-            return intentoCarton()
-
     return carton
 
+#Funcion que genera un cartón valido
 def carton():
     while True:
         carton = intentoCarton()
@@ -73,6 +67,7 @@ def carton():
 
     return carton
 
+#Valida si hay 15 celdas ocupadas
 def validar_quince_numeros(carton):
     celdas_vacias = 0
     for fila in carton:
@@ -82,6 +77,7 @@ def validar_quince_numeros(carton):
 
     return celdas_vacias == 12
 
+#Valida si hay menos de 15 o 15 celdas ocupadas
 def validar_menos_quince_numeros(carton):
     celdas_vacias = 0
     for fila in carton:
@@ -91,6 +87,7 @@ def validar_menos_quince_numeros(carton):
 
     return celdas_vacias <= 12
 
+#Valida si hay mas de 15 o 15 celdas ocupadas
 def validar_mas_quince_numeros(carton):
     celdas_vacias = 0
     for fila in carton:
@@ -108,6 +105,7 @@ def contar_celdas_por_fila(carton, fila):
 
     return contador
 
+#Valida si no hay columnas vacías en un cartón
 def revisar_columnas_ocupadas(carton):
     for x in range(9):
         if carton[0][x] == 0 and carton[1][x] == 0 and carton[2][x] == 0:
@@ -115,6 +113,7 @@ def revisar_columnas_ocupadas(carton):
 
     return True
 
+#Valida que no haya filas vacías por cartón
 def revisar_filas_ocupadas(carton):
     for x in range(3):
         if contar_celdas_por_fila(carton,x) == 0:
@@ -122,14 +121,16 @@ def revisar_filas_ocupadas(carton):
 
     return True
 
+#Valida si los números del cartón estan entre 1 y 90
 def validar_numeros_carton(carton):
     for fila in carton:
         for celda in fila:
-            if celda != 0 and (celda > 90 or celda < 0):
+            if celda != 0 and (celda > 91 or celda < 0):
                 return False
 
     return True
 
+#Valida si en cada columna, los numeros van aumentando por decenas
 def posicion_numeros_izquierda_a_derecha(carton):
     for x in range(3):
         posicion1 = 1
@@ -145,6 +146,7 @@ def posicion_numeros_izquierda_a_derecha(carton):
 
     return True
 
+#Valida si los números de una columna aumentan de mayor a menor de arriba para abajo
 def posicion_numeros_en_columna(carton):
     for x in range(9):
         if ((carton[0][x] != 0 and carton[1][x] != 0) and (carton[0][x] > carton[1][x])) or ((carton[1][x] != 0 and carton[2][x] != 0) and (carton[1][x] > carton[2][x])) or ((carton[0][x] != 0 and carton[2][x] != 0) and (carton[0][x] > carton[2][x])):
@@ -152,11 +154,12 @@ def posicion_numeros_en_columna(carton):
 
     return True
 
+#Valida que no haya numeros repetidos en un cartón
 def numeros_sin_repetir(carton):
     repe = [0] * 91
     for fila in carton:
         for celda in fila:
-            if celda != 0 and celda <= 90:
+            if celda != 0 and celda < 91:
                 if repe[celda] == 0:
                     repe[celda] += 1
                 else:
@@ -164,6 +167,7 @@ def numeros_sin_repetir(carton):
 
     return True
 
+#Valida que el cartón sea de 3 x 9
 def matriz_3x9(carton):
     filas = len(carton)
 
@@ -175,6 +179,7 @@ def matriz_3x9(carton):
 
     return filas == 3 and columnas == 9
 
+#Valida que por fila, solo haya 5 celdas ocupadas
 def fila_5_celdas_ocupadas(carton):
     for fila in carton:
         con = 0
@@ -186,6 +191,7 @@ def fila_5_celdas_ocupadas(carton):
 
     return True
 
+#Valida que no haya columnas vacias en el cartón
 def columnas_vacias(carton):
     for x in range(9):
         if carton[0][x] == 0 and carton[1][x] == 0 and carton[2][x] == 0:
@@ -193,6 +199,7 @@ def columnas_vacias(carton):
 
     return True
 
+#Valida que no haya columnas llenas en el cartón
 def columnas_llenas(carton):
     for x in range(9):
         if carton[0][x] != 0 and carton[1][x] != 0 and carton[2][x] != 0:
@@ -200,6 +207,7 @@ def columnas_llenas(carton):
 
     return True
 
+#Valida que haya solo tres columnas con una celda ocupada
 def columnas_con_una_celda_ocupada(carton):
     uno = 0
 
@@ -213,6 +221,7 @@ def columnas_con_una_celda_ocupada(carton):
 
     return uno == 3
 
+#Valida que no haya filas con más de 2 celdas vacías consecutivas
 def filas_2_celdas_consecutivas_vacias(carton):
     for x in range(3):
         for y in range(7):
@@ -221,6 +230,7 @@ def filas_2_celdas_consecutivas_vacias(carton):
 
     return True
 
+#Valida que no haya filas con más de 2 celdas ocupadas consecutivas
 def filas_2_celdas_consecutivas_ocupadas(carton):
     for x in range(3):
         for y in range(7):
@@ -229,6 +239,7 @@ def filas_2_celdas_consecutivas_ocupadas(carton):
 
     return True
 
+#Función que imprime un cartón
 def imprimirCarton(carton):
     print('\n')
     for fila in range(3):
