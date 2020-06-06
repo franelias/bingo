@@ -132,7 +132,7 @@ def validar_numeros_carton(carton):
 
 def posicion_numeros_izquierda_a_derecha(carton):
     for x in range(3):
-        posicion1 = 0
+        posicion1 = 1
         posicion2 = 9
         for y in range(9):
             if carton [x][y] != 0:
@@ -143,7 +143,7 @@ def posicion_numeros_izquierda_a_derecha(carton):
             if posicion2 == 89:
                 posicion2 += 1
 
-        return True
+    return True
 
 def posicion_numeros_en_columna(carton):
     for x in range(9):
@@ -156,7 +156,7 @@ def numeros_sin_repetir(carton):
     repe = [0] * 91
     for fila in carton:
         for celda in fila:
-            if celda != 0:
+            if celda != 0 and celda <= 90:
                 if repe[celda] == 0:
                     repe[celda] += 1
                 else:
