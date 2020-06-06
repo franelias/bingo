@@ -1,32 +1,34 @@
-from src.bingo import carton
+from tests.cartones import *
 from src.bingo import validar_quince_numeros
 from src.bingo import validar_menos_quince_numeros
 from src.bingo import validar_mas_quince_numeros
-from src.bingo import contar_celdas_por_fila
-from src.bingo import revisar_columnas_ocupadas
-from src.bingo import revisar_filas_ocupadas
+from src.bingo import numeros_sin_repetir
+from src.bingo import matriz_3x9
+from src.bingo import validar_numeros_carton
 
 #Test que revisa si la cantidad de celda ocupadas es 15
 def test_contar_celdas_ocupadas():
-    mi_carton = carton()
-    assert validar_quince_numeros(mi_carton)
+    assert validar_quince_numeros(carton_valido)
+    assert not validar_quince_numeros(carton_invalido1)
 
 #Test que revisa si la cantidad de celdas ocupadas no es mayor a 15
 def test_menos_de_15_celdas_ocupadas():
-    mi_carton = carton()
-    assert validar_menos_quince_numeros(mi_carton)
+    assert validar_menos_quince_numeros(carton_valido)
+    assert not validar_menos_quince_numeros(carton_invalido1)
 
 #Test que revisa si la cantidad de celdas ocupadas no es menor a 15
 def test_mas_de_15_celdas_ocupadas():
-    mi_carton = carton()
-    assert validar_mas_quince_numeros(mi_carton)
+    assert validar_mas_quince_numeros(carton_valido)
+    assert not validar_mas_quince_numeros(carton_invalido2)
 
-#Test que revisa si hay al menos una celda ocupada en cada columna del carton
-def test_revisar_columnas_ocupadas():
-    mi_carton = carton()
-    assert revisar_columnas_ocupadas(mi_carton)
+def test_numeros_repetidos():
+    assert numeros_sin_repetir(carton_valido)
+    assert not numeros_sin_repetir(carton_invalido1)
 
-#Test que valida que hay por lo menos una celda ocupada por fila
-def test_revisar_filas_ocupadas():
-    mi_carton = carton()
-    assert revisar_filas_ocupadas(mi_carton)
+def test_matrix_3x9():
+    assert matriz_3x9(carton_valido)
+    assert not matriz_3x9(carton_invalido1)
+
+def test_validar_uno_a_noventa():
+    assert validar_numeros_carton(carton_valido)
+    assert not validar_numeros_carton(carton_invalido1)
