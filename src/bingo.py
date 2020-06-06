@@ -131,38 +131,19 @@ def validar_numeros_carton(carton):
     return True
 
 def posicion_numeros_izquierda_a_derecha(carton):
-    numeros =  [
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0]
-    ]
+    for x in range(3):
+        posicion1 = 0
+        posicion2 = 9
+        for y in range(9):
+            if carton [x][y] != 0:
+                if not(carton[x][y] >= posicion1 and carton[x][y] <= posicion2):
+                    return False
+            posicion1 += 10
+            posicion2 += 10
+            if posicion2 == 89:
+                posicion2 += 1
 
-    pos = [0] * 15
-
-    for x in range(9):
-        for y in range(3):
-            numeros[x][y] = carton[y][x]
-        numeros[x] = sorted(numeros[x])
-
-    con = 0
-
-    for x in range(9):
-        for y in range(3):
-            if numeros[x][y] != 0:
-                pos[con] = numeros[x][y]
-                con += 1
-
-    for x in range(14):
-        if pos[x] > pos[x+1]:
-            return False
-
-    return True
+        return True
 
 def posicion_numeros_en_columna(carton):
     for x in range(9):
