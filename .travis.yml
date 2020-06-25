@@ -5,10 +5,10 @@ python:
     - 3.7
 
 install:
-    pip install coveralls
+    pip install -r requirements.txt
 
 script:
-    coverage run -m --source=/home/travis/build/franelias/bingo/src pytest
+    pytest --cov=src/
 
 after_success:
     coveralls
