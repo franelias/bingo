@@ -44,15 +44,3 @@ El resultado de ejecutar el programa es un cartón valido como el siguiente:
 0 0 21 0 48 55 0 71 85
 ```
 En el, cada celda puede tener dos formas, una representada con un 0, celda vacía, o con un número mayor a este, que indica que no esta vacía y posee el valor que le corresponde.
-
-## Testeo
-El proyecto cuenta con una serie de tests que validan cada una de las condiciones antes mencionadas que debe cumplir un cartón. os mismos se encuentran en la carpeta `tests` del repositorio.
-
-Para ejecutarlos, se requiere la herramienta `pytest`. La instalación del mismo se hace a través de la herramienta `pip`
-```
-pip install -U pytest
-```
-Ya instalado, basta con correrlo para ver la ejecución de los tests con el comando
-```
-pytest
-```
