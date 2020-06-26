@@ -32,7 +32,7 @@ git clone https://github.com/franelias/bingo.git
 ```
 python src/bingo.py
 ```
-Aclaración: en algunas distros, vease `Ubuntu`, se debe ejecutar el programa usando `python3` en lugar de `python`, para usar la version 3.x del mismo.
+Aclaración: en distros basadas en `Debian`, vease `Ubuntu` por ejemplo, se debe ejecutar el programa usando `python3` en lugar de `python`, para usar la version 3.x del mismo.
 
 ## Resultado
 El resultado de ejecutar el programa es un cartón valido como el siguiente:
