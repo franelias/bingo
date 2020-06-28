@@ -247,4 +247,6 @@ def imprimirCarton(carton):
             print(carton[fila][columna],end=' ')
         print('\n')
 
-imprimirCarton(carton())
+carton_creado = carton()
+
+imprimirCarton(carton_creado)
