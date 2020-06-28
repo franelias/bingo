@@ -23,7 +23,7 @@ El mismo se basa en el juego de bingo tradicional de 90 bolas. A través del uso
 
 
 ## Uso
-El programa utiliza para su ejecución `Python 3`, y para su ejecución, se requieren los siguientes pasos:
+El programa utiliza el lenguaje `Python 3`, y para su ejecución, se requieren los siguientes pasos:
 - Clonar el repositorio
 ```
 git clone https://github.com/franelias/bingo.git
@@ -32,6 +32,12 @@ git clone https://github.com/franelias/bingo.git
 ```
 python src/bingo.py
 ```
+
+De la misma manera, se puede utilizar el siguiente comando para visualizar un cartón pero en formato HTML:
+```
+python web/bingo_web.py
+```
+
 Aclaración: en distros basadas en `Debian`, vease `Ubuntu` por ejemplo, se debe ejecutar el programa usando `python3` en lugar de `python`, para usar la version 3.x del mismo.
 
 ## Resultado
