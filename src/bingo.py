@@ -240,10 +240,3 @@ def filas_2_celdas_consecutivas_ocupadas(carton):
                 return False
 
     return True
-
-#Función que imprime un cartón
-def imprimirCarton(carton):
-    for fila in range(3):
-        for columna in range(9):
-            print(carton[fila][columna],end=' ')
-        print('\n')
