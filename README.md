@@ -50,6 +50,6 @@ El resultado de ejecutar el programa es un cartón valido como el siguiente:
 0 0 21 0 48 55 0 71 85
 ```
 O en la version HTML:
-![Imagen carton](https://github.com/franelias/bingo/tree/master/img/bingo_ejemplo.png)
+![Imagen carton](img/bingo_ejemplo.png)
 
 En el, cada celda puede tener dos formas, una representada con un 0, celda vacía, o con un número mayor a este, que indica que no esta vacía y posee el valor que le corresponde.
