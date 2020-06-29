@@ -125,7 +125,7 @@ def revisar_filas_ocupadas(carton):
 def validar_numeros_carton(carton):
     for fila in carton:
         for celda in fila:
-            if celda != 0 and (celda > 91 or celda < 0):
+            if celda > 91 or celda < 0:
                 return False
 
     return True
@@ -156,16 +156,12 @@ def posicion_numeros_en_columna(carton):
 
 #Valida que no haya numeros repetidos en un cartón
 def numeros_sin_repetir(carton):
-    repe = [0] * 91
+    set = {0}
     for fila in carton:
         for celda in fila:
-            if celda != 0 and celda < 91:
-                if repe[celda] == 0:
-                    repe[celda] += 1
-                else:
-                    return False
+            set.add(celda)
 
-    return True
+    return len(set) == 16
 
 #Valida que el cartón sea de 3 x 9
 def matriz_3x9(carton):
