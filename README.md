@@ -30,12 +30,12 @@ git clone https://github.com/franelias/bingo.git
 ```
 - Ejecutar el programa
 ```
-python src/bingo.py
+python bingo_terminal.py
 ```
 
 De la misma manera, se puede utilizar el siguiente comando para visualizar un cartón pero en formato HTML:
 ```
-python web/bingo_web.py
+python bingo_web.py
 ```
 
 Aclaración: en distros basadas en `Debian`, vease `Ubuntu` por ejemplo, se debe ejecutar el programa usando `python3` en lugar de `python`, para usar la version 3.x del mismo.
@@ -49,4 +49,7 @@ El resultado de ejecutar el programa es un cartón valido como el siguiente:
 
 0 0 21 0 48 55 0 71 85
 ```
+O en la version HTML:
+![Imagen carton](https://github.com/franelias/bingo/tree/master/img/bingo_ejemplo.png)
+
 En el, cada celda puede tener dos formas, una representada con un 0, celda vacía, o con un número mayor a este, que indica que no esta vacía y posee el valor que le corresponde.
