@@ -228,7 +228,6 @@ def filas_2_celdas_consecutivas_vacias(carton):
             set.add(carton[x][y])
             set.add(carton[x][y+1])
             set.add(carton[x][y+2])
-            print(set)
             if len(set) == 1:
                 return False
 
@@ -243,7 +242,7 @@ def filas_2_celdas_consecutivas_ocupadas(carton):
             set.add(carton[x][y])
             set.add(carton[x][y+1])
             set.add(carton[x][y+2])
-            if len(set) != 4:
+            if len(set) == 4:
                 return False
 
     return True
