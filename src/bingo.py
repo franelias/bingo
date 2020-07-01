@@ -62,7 +62,7 @@ def intentoCarton():
 def carton():
     while True:
         carton = intentoCarton()
-        if validar_quince_numeros(carton) and validar_menos_quince_numeros(carton) and validar_mas_quince_numeros(carton) and revisar_columnas_ocupadas(carton) and revisar_filas_ocupadas(carton) and validar_numeros_carton(carton) and posicion_numeros_izquierda_a_derecha(carton) and posicion_numeros_en_columna(carton) and numeros_sin_repetir(carton) and matriz_3x9(carton) and fila_5_celdas_ocupadas(carton) and columnas_vacias(carton) and columnas_llenas(carton) and columnas_con_una_celda_ocupada(carton) and filas_2_celdas_consecutivas_vacias(carton) and filas_2_celdas_consecutivas_ocupadas(carton):
+        if validar_quince_numeros(carton) and validar_menos_quince_numeros(carton) and validar_mas_quince_numeros(carton) and revisar_columnas_ocupadas(carton) and revisar_filas_ocupadas(carton) and validar_numeros_carton(carton) and posicion_numeros_izquierda_a_derecha(carton) and posicion_numeros_en_columna(carton) and numeros_sin_repetir(carton) and matriz_3x9(carton) and fila_5_celdas_ocupadas(carton) and columnas_vacias(carton) and columnas_llenas(carton) and columnas_con_una_celda_ocupada(carton) and filas_2_celdas_consecutivas_vacias_o_ocupadas(carton):
             break
 
     return carton
@@ -160,8 +160,7 @@ def posicion_numeros_en_columna(carton):
         if carton[2][x] != 0:
             list.append(carton[2][x])
 
-        if len(list) > 1 and list != sorted(list,reverse=True):
-
+        if len(list) > 1 and list != sorted(list):
             return False
 
     return True
