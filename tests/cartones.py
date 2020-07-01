@@ -31,12 +31,12 @@ carton_invalido2 = [
 carton_invalido3 = [
     [0,0,29,33,0,53,0,0,87],
     [1,0,21,34,44,57,0,0,86],
-    [9,14,0,0,40,58,0,60,0]
+    [11,14,0,0,40,58,0,60,0]
 ]
 
 #Carton invalido que posee filas con mas de dos celdas consecutivas vacias y ocupadas y filas vacias
 carton_invalido4 = [
     [0,0,0,0,0,0,0,0,0],
-    [7,11,25,0,0,0,0,77,87],
-    [0,0,26,39,49,50,0,0,0]
+    [7,11,25,0,0,0,0,77,93],
+    [50,0,26,39,49,50,0,0,0]
 ]

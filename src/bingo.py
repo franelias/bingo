@@ -132,26 +132,15 @@ def validar_numeros_carton(carton):
 
 #Valida si en cada columna, los numeros van aumentando por decenas
 def posicion_numeros_izquierda_a_derecha(carton):
+    posicion1 = [1,10,20,30,40,50,60,70,80]
+    posicion2 = [9,19,29,39,49,59,69,79,90]
+
     for x in range(3):
-        posicion1 = 0
-        posicion2 = 10
-        if carton[x][0] != 0 and not carton[x][0] > posicion1 and carton[x][0] < posicion2:
-            return False
-
-        posicion1 += 9
-        posicion2 += 10
-
-        for y in range(8):
-            if carton[x][y+1] != 0 and not carton[x][y+1] > posicion1 and carton[x][y+1] < posicion2:
-                return False
-
-            posicion1 += 10
-            posicion2 += 10
-            if posicion2 == 90:
-                posicion2 += 1
-
+        for y in range(9):
+            if carton[x][y] != 0:
+                if not (carton[x][y] >= posicion1[y] and carton[x][y] <= posicion2[y]):
+                    return False
     return True
-
 
 #Valida si los números de una columna aumentan de mayor a menor de arriba para abajo
 def posicion_numeros_en_columna(carton):
