@@ -148,8 +148,20 @@ def posicion_numeros_izquierda_a_derecha(carton):
 
 #Valida si los números de una columna aumentan de mayor a menor de arriba para abajo
 def posicion_numeros_en_columna(carton):
+    list = []
     for x in range(9):
-        if ((carton[0][x] != 0 and carton[1][x] != 0) and (carton[0][x] > carton[1][x])) or ((carton[1][x] != 0 and carton[2][x] != 0) and (carton[1][x] > carton[2][x])) or ((carton[0][x] != 0 and carton[2][x] != 0) and (carton[0][x] > carton[2][x])):
+        list = []
+        if carton[0][x] != 0:
+            list.append(carton[0][x])
+
+        if carton[1][x] != 0:
+            list.append(carton[1][x])
+
+        if carton[2][x] != 0:
+            list.append(carton[2][x])
+
+        if len(list) > 1 and list != sorted(list,reverse=True):
+
             return False
 
     return True
