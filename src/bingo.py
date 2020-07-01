@@ -221,18 +221,29 @@ def columnas_con_una_celda_ocupada(carton):
 
 #Valida que no haya filas con más de 2 celdas vacías consecutivas
 def filas_2_celdas_consecutivas_vacias(carton):
+    set = {0}
     for x in range(3):
         for y in range(7):
-            if carton[x][y] == 0 and carton[x][y+1] == 0 and carton[x][y+2] == 0:
+            set = {0}
+            set.add(carton[x][y])
+            set.add(carton[x][y+1])
+            set.add(carton[x][y+2])
+            print(set)
+            if len(set) == 1:
                 return False
 
     return True
 
 #Valida que no haya filas con más de 2 celdas ocupadas consecutivas
 def filas_2_celdas_consecutivas_ocupadas(carton):
+    set = {0}
     for x in range(3):
         for y in range(7):
-            if carton[x][y] != 0 and carton[x][y+1] != 0 and carton[x][y+2] != 0:
+            set = {0}
+            set.add(carton[x][y])
+            set.add(carton[x][y+1])
+            set.add(carton[x][y+2])
+            if len(set) != 4:
                 return False
 
     return True
