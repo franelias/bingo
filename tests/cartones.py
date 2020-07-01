@@ -1,11 +1,15 @@
 from src.bingo import carton
 
-#Carton valido generado por el programa
+#Carton valido generado a mano
 carton_valido = [
     [0,00,26,30,00,55,60,00,81],
     [0,11,00,37,48,00,00,76,87],
     [2,19,00,00,49,00,69,77,00]
 ]
+
+
+#Carton valido generado por el programa
+carton_valido_programa = carton()
 
 #Carton invalido generado a mano, en donde hay numeros repetidos,
 #no hay 15 celdas ocupadas, no hay 27 celdas en total y donde los numeros no van del 1 al 90.
