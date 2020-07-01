@@ -158,14 +158,9 @@ def posicion_numeros_en_columna(carton):
     list = []
     for x in range(9):
         list = []
-        if carton[0][x] != 0:
-            list.append(carton[0][x])
-
-        if carton[1][x] != 0:
-            list.append(carton[1][x])
-
-        if carton[2][x] != 0:
-            list.append(carton[2][x])
+        for y in range(3):
+            if carton[y][x] != 0:
+                list.append(carton[y][x])
 
         if len(list) > 1 and list != sorted(list):
             return False
